@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimateConstraintsPriority" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRd-VN-Nzv">
+                                <rect key="frame" x="0.0" y="119" width="124" height="71"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="Sc4-Jd-QDb"/>
+                                    <constraint firstAttribute="width" constant="124" id="X1B-Ar-qrB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUg-UF-tpQ">
+                                <rect key="frame" x="0.0" y="198" width="169" height="82"/>
+                                <color key="backgroundColor" red="0.69911960659898476" green="0.16260513471690025" blue="0.13641397909820696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="TgE-J7-7t9"/>
+                                    <constraint firstAttribute="height" constant="82" id="dcT-vI-KNw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="orangeView" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-1O-yq3">
+                                <rect key="frame" x="177" y="57" width="137" height="316"/>
+                                <color key="backgroundColor" red="0.69911960659898476" green="0.37528545819473708" blue="0.062113591629445172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="OrangeView" label="OrangeView"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="DyS-8S-qui"/>
+                                    <constraint firstAttribute="height" constant="316" id="u4c-ui-hfk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkp-dN-Rle">
+                                <rect key="frame" x="129" y="475" width="145" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Click to slide">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rak-yi-sq7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XUg-UF-tpQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="1" id="2fX-gJ-XtK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XUg-UF-tpQ" secondAttribute="bottom" constant="582" id="78H-Ni-9Au"/>
+                            <constraint firstItem="XUg-UF-tpQ" firstAttribute="top" secondItem="lRd-VN-Nzv" secondAttribute="bottom" constant="8" id="7HF-1S-VNx"/>
+                            <constraint firstItem="lRd-VN-Nzv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="RHD-0j-i4t"/>
+                            <constraint firstItem="aLJ-1O-yq3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="gJL-Zh-LcE"/>
+                            <constraint firstItem="XUg-UF-tpQ" firstAttribute="trailing" secondItem="lRd-VN-Nzv" secondAttribute="trailing" priority="1" id="giX-av-aMj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aLJ-1O-yq3" secondAttribute="trailing" priority="1" id="j4s-q5-4t2"/>
+                            <constraint firstItem="lRd-VN-Nzv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="1" id="oC8-cl-wBg"/>
+                            <constraint firstItem="aLJ-1O-yq3" firstAttribute="leading" secondItem="XUg-UF-tpQ" secondAttribute="trailing" constant="8" id="qkp-86-fx9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="OrangeView" destination="aLJ-1O-yq3" id="u33-is-eRO"/>
+                        <outlet property="RedView" destination="XUg-UF-tpQ" id="3zm-s9-D3O"/>
+                        <outlet property="blueView" destination="lRd-VN-Nzv" id="MIs-nd-rjy"/>
+                        <outlet property="blueViewLeading" destination="oC8-cl-wBg" id="BXn-MJ-pzW"/>
+                        <outlet property="blueViewRight" destination="giX-av-aMj" id="nkO-7F-RP3"/>
+                        <outlet property="orangeViewTrailing" destination="j4s-q5-4t2" id="iZ7-YV-WQg"/>
+                        <outlet property="redViewLeading" destination="2fX-gJ-XtK" id="hY1-l1-adC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
